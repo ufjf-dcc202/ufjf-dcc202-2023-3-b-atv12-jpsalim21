@@ -10,5 +10,5 @@ let estoque = {
 };
 
 function getEstoque(){
-    return estoque;
+    return structuredClone(estoque);
 }
