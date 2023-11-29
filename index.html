@@ -13,14 +13,36 @@
         <section>
             <form name="entrada">
                 <input name="quantidade" value="5" type="number" min="0" max="12">
-                <label>
-                    <input type="radio" name="origem" value="Maria" id="oMaria" checked>
-                    Maria
-                </label>
-                <label>
-                    <input type="radio" name="origem" value="João" id="oJoao">
-                    João
-                </label>
+                <fieldset>
+                    <legend>Origem</legend>
+                    <label>
+                        <input type="radio" name="origem" value="pomar" checked>
+                        Pomar
+                    </label>
+                    <label>
+                        <input type="radio" name="origem" value="João" id="oJoao">
+                        João
+                    </label>
+                    <label>
+                        <input type="radio" name="origem" value="Maria" id="oMaria">
+                        Maria
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Destino</legend>
+                    <label>
+                        <input type="radio" name="destino" value="pomar" id="oMaria" checked>
+                        Pomar
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value=joão" id="oJoao">
+                        João
+                    </label>
+                    <label>
+                        <input type="radio" name="destino" value="maria" id="oMaria">
+                        Maria
+                    </label>
+                </fieldset>
                 <select name="fruta">
                     <option value="maçã">maçã</option>
                     <option value="pera">pera</option>
@@ -29,8 +51,11 @@
                 <button type="submit" name="enviar">Enviar</button>
             </form>
         </section>
-        <section>
-
+        <section id="saida">
+            <h2>João</h2>
+            <ol id="joao"></ol>
+            <h2>Maria</h2>
+            <ol id="maria"></ol>
         </section>
     </main>
 </body>
