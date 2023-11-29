@@ -6,4 +6,5 @@ function leFormulario(event){
     const frutas = document.entrada.fruta.value;
 
     console.log("Eu tenho " + quantidade + " " + frutas);
+    //document.entrada.submit();
 }
