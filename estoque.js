@@ -42,6 +42,7 @@ function transacao(origem, destino, tipo, qtd){
             const monte = pessoa[i];
             if(monte.tipo == tipo){
                 pessoa[i].quantidade += qtd;
+                return;
             }
         }
         const novoMonte = {'tipo': tipo, 'quantidade': qtd};
