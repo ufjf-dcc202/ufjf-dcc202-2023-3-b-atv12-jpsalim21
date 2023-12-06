@@ -25,6 +25,9 @@ function getEstoque(){
 }
 
 function transacao(origem, destino, tipo, qtd){
+    if(destino === origem){
+        return;
+    }
     if(destino === "pomar"){
         dePessoaParaPomar(destino, qtd, tipo);
         return;
