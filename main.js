@@ -21,10 +21,17 @@ function leFormulario(event){
 function atualizaTela(){
     const estoque = getEstoque();
     olJoao.innerHTML = "";
+    olMaria.innerHTML = "";
     for(let i = 0; i < estoque.joao.length; i++){
         const monte = estoque.joao[i];
         const li = document.createElement('li');
         li.textContent = monte.tipo + ": " + monte.quantidade;
         olJoao.append(li);
+    }
+    for(let i = 0; i < estoque.maria.length; i++){
+        const monte = estoque.maria[i];
+        const li = document.createElement('li');
+        li.textContent = monte.tipo + ": " + monte.quantidade;
+        olMaria.append(li);
     }
 }
