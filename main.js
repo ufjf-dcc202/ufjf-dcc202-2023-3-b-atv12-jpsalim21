@@ -22,16 +22,16 @@ function atualizaTela(){
     const estoque = getEstoque();
     olJoao.innerHTML = "";
     olMaria.innerHTML = "";
-    for(let i = 0; i < estoque.joao.length; i++){
-        const monte = estoque.joao[i];
+    preencherLista(olJoao, estoque.joao);
+    preencherLista(olMaria, estoque.maria);
+}
+
+function preencherLista(lista, estoque){
+    lista.innerHTML = "";
+    for(let i = 0; i < estoque.length; i++){
+        const monte = estoque[i];
         const li = document.createElement('li');
         li.textContent = monte.tipo + ": " + monte.quantidade;
-        olJoao.append(li);
-    }
-    for(let i = 0; i < estoque.maria.length; i++){
-        const monte = estoque.maria[i];
-        const li = document.createElement('li');
-        li.textContent = monte.tipo + ": " + monte.quantidade;
-        olMaria.append(li);
+        lista.append(li);
     }
 }
