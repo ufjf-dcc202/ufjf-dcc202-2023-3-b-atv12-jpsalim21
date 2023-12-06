@@ -1,5 +1,8 @@
+import { getEstoque } from "./estoque.js";
+
 const olJoao = document.querySelector("#joao");
 const olMaria = document.querySelector("#maria");
+
 document.entrada.addEventListener("submit", leFormulario);
 
 function leFormulario(event){
@@ -11,4 +14,8 @@ function leFormulario(event){
 
     console.log(origem + " doa " + quantidade + " " + frutas + " para " + destino);
     //document.entrada.submit();
+}
+
+function atualizaTela(){
+
 }
