@@ -37,17 +37,20 @@ function transacao(origem, destino, tipo, qtd){
     }
 
     if(origem === "pomar"){
-        const pessoa = estoque[destino];
-        for(let i = 0; i < pessoa.length; i++){
-            const monte = pessoa[i];
-            if(monte.tipo == tipo){
-                pessoa[i].quantidade += qtd;
-                return;
-            }
-        }
-        const novoMonte = {'tipo': tipo, 'quantidade': qtd};
-        pessoa.push(novoMonte);
+        dePomarParaPessoa(destino, qtd, tipo);
     }
+}
+function dePomarParaPessoa(destino, qtd, tipo){
+    const pessoa = estoque[destino];
+    for(let i = 0; i < pessoa.length; i++){
+        const monte = pessoa[i];
+        if(monte.tipo == tipo){
+            pessoa[i].quantidade += qtd;
+            return;
+        }
+    }
+    const novoMonte = {'tipo': tipo, 'quantidade': qtd};
+    pessoa.push(novoMonte);
 }
 
 export {
