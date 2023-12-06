@@ -24,14 +24,14 @@ function getEstoque(){
     return structuredClone(estoque);
 }
 
-function transacao(origem, destino, tipo, quantidade){
+function transacao(origem, destino, tipo, qtd){
     if(destino === "pomar"){
         const pessoa = estoque[origem];
         console.log(origem);
         for(let i = 0; i < pessoa.length; i++){
             const monte = pessoa[i];
             if(monte.tipo === tipo){
-                monte.quantidade -= quantidade;
+                monte.quantidade -= qtd;
             }
         }
     }
