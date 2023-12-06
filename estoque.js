@@ -27,13 +27,13 @@ function getEstoque(){
 function transacao(origem, destino, tipo, quantidade){
     if(destino === "pomar"){
         const pessoa = estoque[origem];
+        console.log(origem);
         for(let i = 0; i < pessoa.length; i++){
             const monte = pessoa[i];
             if(monte.tipo === tipo){
                 monte.quantidade -= quantidade;
             }
         }
-        return;
     }
 }
 
