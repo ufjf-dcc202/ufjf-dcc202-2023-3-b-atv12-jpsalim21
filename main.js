@@ -5,6 +5,8 @@ const olMaria = document.querySelector("#maria");
 
 document.entrada.addEventListener("submit", leFormulario);
 
+atualizaTela();
+
 function leFormulario(event){
     event.preventDefault();
     const quantidade = Number(document.entrada.quantidade.value);
@@ -17,5 +19,12 @@ function leFormulario(event){
 }
 
 function atualizaTela(){
-
+    const estoque = getEstoque();
+    olJoao.innerHTML = "";
+    for(let i = 0; i < estoque.joao.length; i++){
+        const monte = estoque.joao[i];
+        const li = document.createElement('li');
+        li.textContent = monte.tipo + ": " + monte.quantidade;
+        olJoao.append(li);
+    }
 }
