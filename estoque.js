@@ -12,12 +12,17 @@ let estoque = {
 let estoque = {
     'joao': [
         {'tipo': 'maca', 'quantidade': 1},
-        {'tipo': 'peras', 'quantidade': 2}
+        {'tipo': 'pera', 'quantidade': 2}
     ],
     'maria': [
         {'tipo': 'maca', 'quantidade': 2},
         {'tipo': 'banana', 'quantidade': 4}
     ]
+}
+
+function limpaLista(){
+    console.log("Chamou");
+    estoque = {'joao': [], 'maria': []};
 }
 
 function getEstoque(){
@@ -93,5 +98,6 @@ function dePomarParaPessoa(destino, qtd, tipo){
 
 export {
     getEstoque,
-    transacao
+    transacao,
+    limpaLista
 };
