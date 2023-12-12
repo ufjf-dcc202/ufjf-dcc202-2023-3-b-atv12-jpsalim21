@@ -66,19 +66,17 @@ function dePessoaParaPessoa(origem, destino, qtd, tipo){
     const quantidadeReal = Math.min(qtd, monteOrigem.quantidade);
     monteDestino.quantidade += quantidadeReal;
     monteOrigem.quantidade -= quantidadeReal; 
-
-
 }
 
 function dePessoaParaPomar(origem, qtd, tipo){
     const pessoa = estoque[origem];
-        console.log(origem);
-        for(let i = 0; i < pessoa.length; i++){
-            const monte = pessoa[i];
-            if(monte.tipo === tipo){
-                monte.quantidade -= qtd;
-            }
+    console.log(origem);
+    for(let i = 0; i < pessoa.length; i++){
+        const monte = pessoa[i];
+        if(monte.tipo === tipo){
+            monte.quantidade -= qtd;
         }
+    }
 }
 function dePomarParaPessoa(destino, qtd, tipo){
     const pessoa = estoque[destino];
