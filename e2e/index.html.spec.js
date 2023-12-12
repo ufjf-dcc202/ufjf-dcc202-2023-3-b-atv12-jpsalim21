@@ -80,7 +80,7 @@ test.describe("estrutura do HTML", () => {
     console.log(fs[0]);
     const legend1 = page.locator('form>fieldset:nth-child(1)>legend');
     await expect(legend1).toHaveText('Origem');
-    const legend2 = page.locator('form>fieldset:nth-child(2)>legend');
+    const legend2 = page.locator('form fieldset:nth-child(2)>legend');
     await expect(legend2).toHaveText('Destino');
   });
 

@@ -12,7 +12,6 @@
         <p>Esta é a página principal que usa JavaScript para adicionar iteração.</p>
         <section>
             <form name="entrada">
-                <input name="quantidade" value="1" type="number" min="0" max="12"  step="1">
                 <fieldset>
                     <legend>Origem</legend>
                     <label>
@@ -43,10 +42,11 @@
                         Maria
                     </label>
                 </fieldset>
+                <input name="quantidade" value="1" type="number" min="0" max="12"  step="1">
                 <select name="fruta">
-                    <option value="maca">maçã</option>
-                    <option value="pera">pera</option>
-                    <option value="banana">banana</option>
+                    <option value="maca">Maçã</option>
+                    <option value="pera">Pera</option>
+                    <option value="banana">Banana</option>
                 </select>
                 <button type="submit" name="enviar">Enviar</button>
                 <button type="button" id="buttonClearList">Limpar Lista</button>
@@ -54,7 +54,9 @@
         </section>
         <section id="saida">
             <h2>João</h2>
-            <ol id="joao"></ol>
+            <ol id="joao">
+
+            </ol>
             <h2>Maria</h2>
             <ol id="maria"></ol>
         </section>
